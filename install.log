@@ -1,0 +1,568 @@
+2019-04-11 19:57:36,565 p=27384 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 19:57:36,589 p=27384 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 19:57:41,869 p=27384 u=jenkins |  ok: [localhost]
+2019-04-11 19:57:41,899 p=27384 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 19:57:42,374 p=27384 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.114611", "end": "2019-04-11 19:57:42.353921", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 19:57:42.239310", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 19:57:42,374 p=27384 u=jenkins |  ...ignoring
+2019-04-11 19:57:42,403 p=27384 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 19:57:42,772 p=27384 u=jenkins |  ok: [localhost]
+2019-04-11 19:57:42,803 p=27384 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 19:57:43,290 p=27384 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": false, "command": "/usr/bin/lxc-create --name Jboss --quiet --template ubuntu --bdev dir --logfile /var/lib/jenkins/lxc-Jboss.log --logpriority INFO", "err": "lxc-create: Jboss: parse.c: lxc_file_for_each_line_mmap: 100 No such file or directory - Failed to open file \"/var/lib/jenkins/.config/lxc/default.conf\"\nlxc-create: Jboss: conf.c: chown_mapped_root: 3126 No uid mapping for container root\nlxc-create: Jboss: lxccontainer.c: do_storage_create: 1288 Error chowning \"/var/lib/jenkins/.local/share/lxc/Jboss/rootfs\" to container root\nlxc-create: Jboss: conf.c: suggest_default_idmap: 4731 You do not have subuids or subgids allocated\nlxc-create: Jboss: conf.c: suggest_default_idmap: 4732 Unprivileged containers require subuids and subgids\nlxc-create: Jboss: lxccontainer.c: do_lxcapi_create: 1869 Failed to create dir storage for Jboss\nlxc-create: Jboss: tools/lxc_create.c: main: 327 Failed to create container Jboss\n", "msg": "Failed executing lxc-create.", "rc": 1}
+2019-04-11 19:57:43,296 p=27384 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 19:57:43,296 p=27384 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 19:57:43,297 p=27384 u=jenkins |  localhost                  : ok=3    changed=1    unreachable=0    failed=1   
+2019-04-11 19:59:16,115 p=27559 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 19:59:16,125 p=27559 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 19:59:20,482 p=27559 u=jenkins |  ok: [localhost]
+2019-04-11 19:59:20,514 p=27559 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 19:59:21,013 p=27559 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.128276", "end": "2019-04-11 19:59:20.986603", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 19:59:20.858327", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 19:59:21,014 p=27559 u=jenkins |  ...ignoring
+2019-04-11 19:59:21,050 p=27559 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 19:59:21,416 p=27559 u=jenkins |  ok: [localhost]
+2019-04-11 19:59:21,450 p=27559 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 19:59:23,246 p=27559 u=jenkins |  changed: [localhost]
+2019-04-11 19:59:23,308 p=27559 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 19:59:23,759 p=27559 u=jenkins |  fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/var/lib/lxc/Jboss/rootfs/opt/sleep.sh): Permission denied"}
+2019-04-11 19:59:23,763 p=27559 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 19:59:23,764 p=27559 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 19:59:23,764 p=27559 u=jenkins |  localhost                  : ok=4    changed=2    unreachable=0    failed=1   
+2019-04-11 20:00:20,740 p=28162 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:00:20,792 p=28162 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:00:27,766 p=28162 u=jenkins |  ok: [localhost]
+2019-04-11 20:00:27,807 p=28162 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:00:28,554 p=28162 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.401195", "end": "2019-04-11 20:00:28.533817", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:00:28.132622", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:00:28,555 p=28162 u=jenkins |  ...ignoring
+2019-04-11 20:00:28,602 p=28162 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:00:29,035 p=28162 u=jenkins |  ok: [localhost]
+2019-04-11 20:00:29,065 p=28162 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:00:29,699 p=28162 u=jenkins |  ok: [localhost]
+2019-04-11 20:00:29,730 p=28162 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:00:31,001 p=28162 u=jenkins |  changed: [localhost]
+2019-04-11 20:00:31,076 p=28162 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:00:31,288 p=28162 u=jenkins |  fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/var/lib/lxc/Jboss/rootfs/etc/systemd/system/jboss.service): Permission denied"}
+2019-04-11 20:00:31,295 p=28162 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 20:00:31,295 p=28162 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:00:31,296 p=28162 u=jenkins |  localhost                  : ok=5    changed=2    unreachable=0    failed=1   
+2019-04-11 20:00:55,843 p=28411 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:00:55,855 p=28411 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:01:01,198 p=28411 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:01,248 p=28411 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:01:01,816 p=28411 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.102803", "end": "2019-04-11 20:01:01.795190", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:01:01.692387", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:01:01,816 p=28411 u=jenkins |  ...ignoring
+2019-04-11 20:01:01,848 p=28411 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:01:02,234 p=28411 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:02,268 p=28411 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:01:02,664 p=28411 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:02,696 p=28411 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:01:03,390 p=28411 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:03,421 p=28411 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:01:03,909 p=28411 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:03,940 p=28411 u=jenkins |  TASK [Create_container : Start container] **************************************
+2019-04-11 20:01:04,265 p=28411 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": false, "command": "/usr/bin/lxc-create --name Jboss --quiet --template ubuntu --bdev dir", "err": "", "msg": "Failed executing lxc-create.", "rc": 1}
+2019-04-11 20:01:04,267 p=28411 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 20:01:04,267 p=28411 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:01:04,267 p=28411 u=jenkins |  localhost                  : ok=6    changed=1    unreachable=0    failed=1   
+2019-04-11 20:01:31,399 p=28690 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:01:31,417 p=28690 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:01:36,625 p=28690 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:36,658 p=28690 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:01:37,147 p=28690 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.106114", "end": "2019-04-11 20:01:37.126299", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:01:37.020185", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:01:37,147 p=28690 u=jenkins |  ...ignoring
+2019-04-11 20:01:37,177 p=28690 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:01:37,579 p=28690 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:37,610 p=28690 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:01:38,021 p=28690 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:38,055 p=28690 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:01:38,709 p=28690 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:38,739 p=28690 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:01:39,198 p=28690 u=jenkins |  ok: [localhost]
+2019-04-11 20:01:39,230 p=28690 u=jenkins |  TASK [Create_container : Start container] **************************************
+2019-04-11 20:02:35,629 p=28690 u=jenkins |  changed: [localhost]
+2019-04-11 20:02:35,773 p=28690 u=jenkins |  TASK [Create_container : Start container] **************************************
+2019-04-11 20:02:37,503 p=28690 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": false, "command": "/usr/bin/lxc-create --name Jboss --quiet --template ubuntu --bdev dir", "err": "", "msg": "Failed executing lxc-create.", "rc": 1}
+2019-04-11 20:02:37,519 p=28690 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 20:02:37,519 p=28690 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:02:37,520 p=28690 u=jenkins |  localhost                  : ok=7    changed=2    unreachable=0    failed=1   
+2019-04-11 20:04:11,458 p=29044 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:04:11,493 p=29044 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:04:18,485 p=29044 u=jenkins |  ok: [localhost]
+2019-04-11 20:04:18,537 p=29044 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:04:19,296 p=29044 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.332695", "end": "2019-04-11 20:04:19.273164", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:04:18.940469", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:04:19,296 p=29044 u=jenkins |  ...ignoring
+2019-04-11 20:04:19,332 p=29044 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:04:20,307 p=29044 u=jenkins |  ok: [localhost]
+2019-04-11 20:04:20,341 p=29044 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:04:21,465 p=29044 u=jenkins |  ok: [localhost]
+2019-04-11 20:04:21,505 p=29044 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:04:22,497 p=29044 u=jenkins |  ok: [localhost]
+2019-04-11 20:04:22,529 p=29044 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:04:23,011 p=29044 u=jenkins |  ok: [localhost]
+2019-04-11 20:04:23,041 p=29044 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-11 20:05:27,646 p=29044 u=jenkins |  changed: [localhost]
+2019-04-11 20:05:27,766 p=29044 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-11 20:05:28,884 p=29044 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": false, "command": "/usr/bin/lxc-create --name Jboss --quiet --template ubuntu --bdev dir", "err": "", "msg": "Failed executing lxc-create.", "rc": 1}
+2019-04-11 20:05:28,895 p=29044 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 20:05:28,895 p=29044 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:05:28,895 p=29044 u=jenkins |  localhost                  : ok=7    changed=2    unreachable=0    failed=1   
+2019-04-11 20:06:34,221 p=29403 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:06:34,253 p=29403 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:06:41,343 p=29403 u=jenkins |  ok: [localhost]
+2019-04-11 20:06:41,399 p=29403 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:06:41,897 p=29403 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.095008", "end": "2019-04-11 20:06:41.874360", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:06:41.779352", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:06:41,897 p=29403 u=jenkins |  ...ignoring
+2019-04-11 20:06:41,927 p=29403 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:06:42,305 p=29403 u=jenkins |  ok: [localhost]
+2019-04-11 20:06:42,338 p=29403 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:06:43,075 p=29403 u=jenkins |  ok: [localhost]
+2019-04-11 20:06:43,107 p=29403 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:06:43,846 p=29403 u=jenkins |  ok: [localhost]
+2019-04-11 20:06:43,878 p=29403 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:06:44,486 p=29403 u=jenkins |  ok: [localhost]
+2019-04-11 20:06:44,517 p=29403 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-11 20:07:26,849 p=29403 u=jenkins |  changed: [localhost]
+2019-04-11 20:07:26,883 p=29403 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-11 20:07:28,091 p=29403 u=jenkins |  changed: [localhost]
+2019-04-11 20:07:28,196 p=29403 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-11 20:07:28,975 p=29403 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": "iptables-save | grep -v \"jboss ports\" | iptables-restore", "delta": "0:00:00.604591", "end": "2019-04-11 20:07:28.951535", "msg": "non-zero return code", "rc": 127, "start": "2019-04-11 20:07:28.346944", "stderr": "/bin/sh: 1: iptables-restore: not found\n/bin/sh: 1: iptables-save: not found", "stderr_lines": ["/bin/sh: 1: iptables-restore: not found", "/bin/sh: 1: iptables-save: not found"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:07:28,979 p=29403 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-11 20:07:28,979 p=29403 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:07:28,979 p=29403 u=jenkins |  localhost                  : ok=8    changed=3    unreachable=0    failed=1   
+2019-04-11 20:08:01,089 p=29802 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:08:01,102 p=29802 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:08:06,946 p=29802 u=jenkins |  ok: [localhost]
+2019-04-11 20:08:06,978 p=29802 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:08:07,401 p=29802 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.083375", "end": "2019-04-11 20:08:07.380792", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:08:07.297417", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:08:07,401 p=29802 u=jenkins |  ...ignoring
+2019-04-11 20:08:07,431 p=29802 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:08:07,794 p=29802 u=jenkins |  ok: [localhost]
+2019-04-11 20:08:07,823 p=29802 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:08:10,055 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:10,091 p=29802 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:08:11,066 p=29802 u=jenkins |  ok: [localhost]
+2019-04-11 20:08:11,097 p=29802 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:08:12,231 p=29802 u=jenkins |  ok: [localhost]
+2019-04-11 20:08:12,288 p=29802 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-11 20:08:50,079 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:50,108 p=29802 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-11 20:08:50,885 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:50,914 p=29802 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-11 20:08:51,282 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:51,312 p=29802 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:08:51,845 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:51,874 p=29802 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:08:52,215 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:52,244 p=29802 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:08:52,586 p=29802 u=jenkins |  changed: [localhost]
+2019-04-11 20:08:52,591 p=29802 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:08:52,591 p=29802 u=jenkins |  localhost                  : ok=12   changed=8    unreachable=0    failed=0   
+2019-04-11 20:31:12,512 p=818 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:31:12,524 p=818 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:31:16,409 p=818 u=jenkins |  ok: [localhost]
+2019-04-11 20:31:16,439 p=818 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:31:16,920 p=818 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.108276", "end": "2019-04-11 20:31:16.890868", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:31:16.782592", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:31:16,920 p=818 u=jenkins |  ...ignoring
+2019-04-11 20:31:16,948 p=818 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:31:17,358 p=818 u=jenkins |  ok: [localhost]
+2019-04-11 20:31:17,385 p=818 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:31:19,123 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:31:19,183 p=818 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:31:21,031 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:31:21,086 p=818 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:31:22,090 p=818 u=jenkins |  ok: [localhost]
+2019-04-11 20:31:22,153 p=818 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-11 20:32:00,345 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:32:00,371 p=818 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-11 20:32:01,156 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:32:01,182 p=818 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-11 20:32:01,446 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:32:01,474 p=818 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:32:02,084 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:32:02,114 p=818 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:32:02,462 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:32:02,489 p=818 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:32:02,833 p=818 u=jenkins |  changed: [localhost]
+2019-04-11 20:32:02,837 p=818 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:32:02,837 p=818 u=jenkins |  localhost                  : ok=12   changed=9    unreachable=0    failed=0   
+2019-04-11 20:37:18,555 p=2786 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:37:18,566 p=2786 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:37:22,947 p=2786 u=jenkins |  ok: [localhost]
+2019-04-11 20:37:22,976 p=2786 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:37:23,385 p=2786 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.087082", "end": "2019-04-11 20:37:23.367380", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:37:23.280298", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:37:23,386 p=2786 u=jenkins |  ...ignoring
+2019-04-11 20:37:23,417 p=2786 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:37:23,782 p=2786 u=jenkins |  ok: [localhost]
+2019-04-11 20:37:23,812 p=2786 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:37:25,301 p=2786 u=jenkins |  changed: [localhost]
+2019-04-11 20:37:25,365 p=2786 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:37:26,737 p=2786 u=jenkins |  ok: [localhost]
+2019-04-11 20:37:26,809 p=2786 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:37:27,716 p=2786 u=jenkins |  ok: [localhost]
+2019-04-11 20:37:27,775 p=2786 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-11 20:52:42,527 p=3638 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-11 20:52:42,622 p=3638 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-11 20:52:47,629 p=3638 u=jenkins |  ok: [localhost]
+2019-04-11 20:52:47,688 p=3638 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-11 20:52:48,133 p=3638 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.097581", "end": "2019-04-11 20:52:48.112565", "msg": "non-zero return code", "rc": 1, "start": "2019-04-11 20:52:48.014984", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-11 20:52:48,133 p=3638 u=jenkins |  ...ignoring
+2019-04-11 20:52:48,163 p=3638 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-11 20:52:48,542 p=3638 u=jenkins |  ok: [localhost]
+2019-04-11 20:52:48,571 p=3638 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-11 20:52:48,993 p=3638 u=jenkins |  ok: [localhost]
+2019-04-11 20:52:49,030 p=3638 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-11 20:52:49,832 p=3638 u=jenkins |  ok: [localhost]
+2019-04-11 20:52:49,861 p=3638 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-11 20:52:50,355 p=3638 u=jenkins |  ok: [localhost]
+2019-04-11 20:52:50,385 p=3638 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-11 20:53:40,280 p=2786 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:40,311 p=2786 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-11 20:53:40,690 p=3638 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:40,742 p=3638 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-11 20:53:40,930 p=3638 u=jenkins |  ok: [localhost]
+2019-04-11 20:53:40,970 p=3638 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-11 20:53:41,236 p=2786 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:41,321 p=2786 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-11 20:53:41,380 p=3638 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:41,425 p=3638 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:53:41,821 p=2786 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:41,879 p=2786 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:53:42,574 p=3638 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:42,630 p=3638 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:53:42,786 p=2786 u=jenkins |  ok: [localhost]
+2019-04-11 20:53:42,838 p=2786 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:53:43,336 p=3638 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:43,394 p=2786 u=jenkins |  ok: [localhost]
+2019-04-11 20:53:43,405 p=3638 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:53:43,449 p=2786 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-11 20:53:44,101 p=3638 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:44,109 p=3638 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:53:44,109 p=3638 u=jenkins |  localhost                  : ok=12   changed=6    unreachable=0    failed=0   
+2019-04-11 20:53:44,150 p=2786 u=jenkins |  changed: [localhost]
+2019-04-11 20:53:44,159 p=2786 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-11 20:53:44,159 p=2786 u=jenkins |  localhost                  : ok=12   changed=6    unreachable=0    failed=0   
+2019-04-12 00:00:20,405 p=6038 u=jenkins |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to have been in '/var/lib/jenkins/workspace/Configure_Container/roles/Create_container/tasks/main.yml': line 33, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Add time destroy container
+  - lineinfile:
+  ^ here
+
+2019-04-12 00:00:45,257 p=6108 u=jenkins |  ERROR! Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to have been in '/var/lib/jenkins/workspace/Configure_Container/roles/Create_container/tasks/main.yml': line 33, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Add time destroy container
+  - lineinfile:
+  ^ here
+
+2019-04-12 00:01:40,675 p=6140 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 00:01:40,687 p=6140 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 00:01:44,262 p=6140 u=jenkins |  ok: [localhost]
+2019-04-12 00:01:44,296 p=6140 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 00:01:44,731 p=6140 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["lxc-destroy", "-n", "Jboss", "-f"], "delta": "0:00:00.101332", "end": "2019-04-12 00:01:44.713073", "msg": "non-zero return code", "rc": 1, "start": "2019-04-12 00:01:44.611741", "stderr": "lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined", "stderr_lines": ["lxc-destroy: Jboss: tools/lxc_destroy.c: main: 259 Container is not defined"], "stdout": "", "stdout_lines": []}
+2019-04-12 00:01:44,732 p=6140 u=jenkins |  ...ignoring
+2019-04-12 00:01:44,759 p=6140 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 00:01:45,147 p=6140 u=jenkins |  ok: [localhost]
+2019-04-12 00:01:45,176 p=6140 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 00:01:46,764 p=6140 u=jenkins |  changed: [localhost]
+2019-04-12 00:01:46,832 p=6140 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 00:01:48,261 p=6140 u=jenkins |  ok: [localhost]
+2019-04-12 00:01:48,329 p=6140 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 00:01:49,095 p=6140 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": false, "msg": "Destination /var/lib/lxc/Jboss/rootfs/opt/sleep.sh does not exist !", "rc": 257}
+2019-04-12 00:01:49,107 p=6140 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-12 00:01:49,107 p=6140 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 00:01:49,108 p=6140 u=jenkins |  localhost                  : ok=5    changed=2    unreachable=0    failed=1   
+2019-04-12 00:05:01,071 p=6904 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 00:05:01,082 p=6904 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 00:05:04,775 p=6904 u=jenkins |  ok: [localhost]
+2019-04-12 00:05:04,804 p=6904 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 00:05:13,413 p=6904 u=jenkins |  changed: [localhost]
+2019-04-12 00:05:13,441 p=6904 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 00:05:13,774 p=6904 u=jenkins |  ok: [localhost]
+2019-04-12 00:05:13,810 p=6904 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 00:06:05,584 p=6904 u=jenkins |  changed: [localhost]
+2019-04-12 00:06:05,614 p=6904 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 00:06:06,641 p=6904 u=jenkins |  changed: [localhost]
+2019-04-12 00:06:06,671 p=6904 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 00:06:07,028 p=6904 u=jenkins |  fatal: [localhost]: FAILED! => {"changed": false, "msg": "Destination /var/lib/lxc/Jboss/rootfs/opt/sleep.sh does not exist !", "rc": 257}
+2019-04-12 00:06:07,033 p=6904 u=jenkins |  	to retry, use: --limit @/var/lib/jenkins/workspace/Configure_Container/configure_container.retry
+
+2019-04-12 00:06:07,033 p=6904 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 00:06:07,033 p=6904 u=jenkins |  localhost                  : ok=5    changed=3    unreachable=0    failed=1   
+2019-04-12 00:06:49,835 p=7725 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 00:06:49,853 p=7725 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 00:06:54,053 p=7725 u=jenkins |  ok: [localhost]
+2019-04-12 00:06:54,082 p=7725 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 00:06:55,944 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:06:55,972 p=7725 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 00:06:56,350 p=7725 u=jenkins |  ok: [localhost]
+2019-04-12 00:06:56,379 p=7725 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 00:07:34,807 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:07:34,836 p=7725 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 00:07:35,503 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:07:35,533 p=7725 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 00:07:35,891 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:07:35,921 p=7725 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 00:07:36,215 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:07:36,244 p=7725 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 00:10:05,978 p=12378 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 00:10:05,990 p=12378 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 00:10:10,608 p=12378 u=jenkins |  ok: [localhost]
+2019-04-12 00:10:10,680 p=12378 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 00:10:11,659 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:10:11,700 p=7725 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 00:10:11,967 p=7725 u=jenkins |  ok: [localhost]
+2019-04-12 00:10:12,003 p=7725 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 00:10:13,876 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:10:13,920 p=7725 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 00:10:14,850 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:10:14,879 p=7725 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 00:10:15,255 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:10:15,314 p=7725 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 00:10:15,843 p=7725 u=jenkins |  changed: [localhost]
+2019-04-12 00:10:15,853 p=7725 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 00:10:15,853 p=7725 u=jenkins |  localhost                  : ok=13   changed=10   unreachable=0    failed=0   
+2019-04-12 00:10:16,497 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:10:16,526 p=12378 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 00:10:16,971 p=12378 u=jenkins |  ok: [localhost]
+2019-04-12 00:10:17,029 p=12378 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 00:11:05,258 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:11:05,347 p=12378 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 00:11:06,220 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:11:06,257 p=12378 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 00:11:06,731 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:11:06,765 p=12378 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 00:11:07,120 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:11:07,154 p=12378 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 00:13:20,621 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:13:20,648 p=12378 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 00:13:21,456 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:13:21,484 p=12378 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 00:13:21,844 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:13:21,874 p=12378 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 00:13:22,384 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:13:22,413 p=12378 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 00:13:22,747 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:13:22,775 p=12378 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 00:13:23,099 p=12378 u=jenkins |  changed: [localhost]
+2019-04-12 00:13:23,102 p=12378 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 00:13:23,102 p=12378 u=jenkins |  localhost                  : ok=13   changed=11   unreachable=0    failed=0   
+2019-04-12 11:37:15,105 p=27671 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 11:37:15,116 p=27671 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 11:37:19,151 p=27671 u=jenkins |  ok: [localhost]
+2019-04-12 11:37:19,180 p=27671 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 11:37:20,811 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:37:20,853 p=27671 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 11:37:21,265 p=27671 u=jenkins |  ok: [localhost]
+2019-04-12 11:37:21,291 p=27671 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 11:38:05,584 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:38:05,620 p=27671 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 11:38:06,470 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:38:06,499 p=27671 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 11:38:06,871 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:38:06,901 p=27671 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 11:38:07,229 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:38:07,255 p=27671 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 11:41:28,709 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:41:28,738 p=27671 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 11:41:30,156 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:41:30,235 p=27671 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 11:41:30,653 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:41:30,681 p=27671 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 11:41:31,225 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:41:31,253 p=27671 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 11:41:31,600 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:41:31,638 p=27671 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 11:41:31,995 p=27671 u=jenkins |  changed: [localhost]
+2019-04-12 11:41:31,999 p=27671 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 11:41:31,999 p=27671 u=jenkins |  localhost                  : ok=13   changed=11   unreachable=0    failed=0   
+2019-04-12 12:02:28,596 p=32682 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 12:02:28,615 p=32682 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 12:02:32,353 p=32682 u=jenkins |  ok: [localhost]
+2019-04-12 12:02:32,496 p=32682 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 12:02:34,733 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:02:34,759 p=32682 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 12:02:35,190 p=32682 u=jenkins |  ok: [localhost]
+2019-04-12 12:02:35,216 p=32682 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 12:03:19,137 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:03:19,293 p=32682 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 12:03:20,151 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:03:20,182 p=32682 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 12:03:20,537 p=32682 u=jenkins |  ok: [localhost]
+2019-04-12 12:03:20,563 p=32682 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 12:03:20,852 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:03:20,878 p=32682 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 12:05:32,969 p=2449 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 12:05:32,999 p=2449 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 12:05:40,174 p=2449 u=jenkins |  ok: [localhost]
+2019-04-12 12:05:40,252 p=2449 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 12:05:41,089 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:05:41,126 p=32682 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 12:05:41,351 p=32682 u=jenkins |  ok: [localhost]
+2019-04-12 12:05:41,378 p=32682 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 12:05:41,822 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:05:41,855 p=32682 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:05:42,673 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:05:42,719 p=32682 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:05:43,385 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:05:43,430 p=32682 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:05:44,093 p=32682 u=jenkins |  changed: [localhost]
+2019-04-12 12:05:44,101 p=32682 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 12:05:44,101 p=32682 u=jenkins |  localhost                  : ok=13   changed=9    unreachable=0    failed=0   
+2019-04-12 12:05:44,199 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:05:44,247 p=2449 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 12:05:44,635 p=2449 u=jenkins |  ok: [localhost]
+2019-04-12 12:05:44,698 p=2449 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 12:06:28,029 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:06:28,062 p=2449 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 12:06:28,719 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:06:28,749 p=2449 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 12:06:29,138 p=2449 u=jenkins |  ok: [localhost]
+2019-04-12 12:06:29,168 p=2449 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 12:06:29,471 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:06:29,502 p=2449 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 12:11:14,077 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:11:14,107 p=2449 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 12:11:14,957 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:11:14,985 p=2449 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 12:11:15,355 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:11:15,385 p=2449 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:11:15,938 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:11:15,967 p=2449 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:11:16,306 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:11:16,336 p=2449 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:11:16,698 p=2449 u=jenkins |  changed: [localhost]
+2019-04-12 12:11:16,702 p=2449 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 12:11:16,703 p=2449 u=jenkins |  localhost                  : ok=13   changed=10   unreachable=0    failed=0   
+2019-04-12 12:34:48,081 p=8283 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 12:34:48,092 p=8283 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 12:34:51,761 p=8283 u=jenkins |  ok: [localhost]
+2019-04-12 12:34:51,797 p=8283 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 12:34:53,948 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:34:53,978 p=8283 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 12:34:54,346 p=8283 u=jenkins |  ok: [localhost]
+2019-04-12 12:34:54,374 p=8283 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 12:35:38,319 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:35:38,357 p=8283 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 12:35:39,216 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:35:39,242 p=8283 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 12:35:39,599 p=8283 u=jenkins |  ok: [localhost]
+2019-04-12 12:35:39,626 p=8283 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 12:35:39,930 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:35:39,955 p=8283 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 12:40:35,067 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:40:35,092 p=8283 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 12:40:37,110 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:40:37,154 p=8283 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 12:40:37,554 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:40:37,581 p=8283 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:40:38,103 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:40:38,132 p=8283 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:40:38,460 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:40:38,488 p=8283 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 12:40:38,828 p=8283 u=jenkins |  changed: [localhost]
+2019-04-12 12:40:38,832 p=8283 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 12:40:38,832 p=8283 u=jenkins |  localhost                  : ok=13   changed=10   unreachable=0    failed=0   
+2019-04-12 13:31:04,210 p=13958 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-12 13:31:04,240 p=13958 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-12 13:31:09,578 p=13958 u=jenkins |  ok: [localhost]
+2019-04-12 13:31:09,607 p=13958 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-12 13:31:11,094 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:31:11,129 p=13958 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-12 13:31:11,624 p=13958 u=jenkins |  ok: [localhost]
+2019-04-12 13:31:11,652 p=13958 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-12 13:31:55,659 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:31:55,693 p=13958 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-12 13:31:56,598 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:31:56,624 p=13958 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-12 13:31:57,005 p=13958 u=jenkins |  ok: [localhost]
+2019-04-12 13:31:57,033 p=13958 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-12 13:31:57,331 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:31:57,357 p=13958 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-12 13:35:54,157 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:35:54,184 p=13958 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-12 13:35:55,784 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:35:55,827 p=13958 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-12 13:35:56,276 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:35:56,304 p=13958 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 13:35:56,829 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:35:56,857 p=13958 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 13:35:57,188 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:35:57,214 p=13958 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-12 13:35:57,562 p=13958 u=jenkins |  changed: [localhost]
+2019-04-12 13:35:57,567 p=13958 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-12 13:35:57,568 p=13958 u=jenkins |  localhost                  : ok=13   changed=10   unreachable=0    failed=0   
+2019-04-13 12:21:44,738 p=10468 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-13 12:21:44,815 p=10468 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-13 12:21:49,277 p=10468 u=jenkins |  ok: [localhost]
+2019-04-13 12:21:49,312 p=10468 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-13 12:21:52,629 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:21:52,657 p=10468 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-13 12:21:53,043 p=10468 u=jenkins |  ok: [localhost]
+2019-04-13 12:21:53,072 p=10468 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-13 12:23:09,183 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:23:09,258 p=10468 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-13 12:23:10,127 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:23:10,153 p=10468 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-13 12:23:10,522 p=10468 u=jenkins |  ok: [localhost]
+2019-04-13 12:23:10,550 p=10468 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-13 12:23:10,859 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:23:10,889 p=10468 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-13 12:26:34,877 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:26:34,902 p=10468 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-13 12:26:36,063 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:26:36,113 p=10468 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-13 12:26:36,514 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:26:36,543 p=10468 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-13 12:26:37,059 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:26:37,085 p=10468 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-13 12:26:37,428 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:26:37,454 p=10468 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-13 12:26:37,790 p=10468 u=jenkins |  changed: [localhost]
+2019-04-13 12:26:37,795 p=10468 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-13 12:26:37,795 p=10468 u=jenkins |  localhost                  : ok=13   changed=10   unreachable=0    failed=0   
+2019-04-13 13:17:46,019 p=16134 u=jenkins |  PLAY [Configure container LXC] *************************************************
+2019-04-13 13:17:46,043 p=16134 u=jenkins |  TASK [Gathering Facts] *********************************************************
+2019-04-13 13:17:50,261 p=16134 u=jenkins |  ok: [localhost]
+2019-04-13 13:17:50,291 p=16134 u=jenkins |  TASK [Create_container : Remove container if exists] ***************************
+2019-04-13 13:17:51,964 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:17:51,996 p=16134 u=jenkins |  TASK [Create_container : Clean artifact path] **********************************
+2019-04-13 13:17:52,541 p=16134 u=jenkins |  ok: [localhost]
+2019-04-13 13:17:52,578 p=16134 u=jenkins |  TASK [Create_container : Create a started container] ***************************
+2019-04-13 13:18:39,738 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:18:39,863 p=16134 u=jenkins |  TASK [Create_container : Copying file job sleep] *******************************
+2019-04-13 13:18:40,756 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:18:40,787 p=16134 u=jenkins |  TASK [Create_container : Add time destroy container] ***************************
+2019-04-13 13:18:41,171 p=16134 u=jenkins |  ok: [localhost]
+2019-04-13 13:18:41,200 p=16134 u=jenkins |  TASK [Create_container : Copying file systemd] *********************************
+2019-04-13 13:18:41,513 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:18:41,540 p=16134 u=jenkins |  TASK [Create_container : Install packages] *************************************
+2019-04-13 13:22:39,126 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:22:39,158 p=16134 u=jenkins |  TASK [Create_container : Stopped container] ************************************
+2019-04-13 13:22:42,182 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:22:42,450 p=16134 u=jenkins |  TASK [Create_container : Delete iptables for Jboss] ****************************
+2019-04-13 13:22:43,267 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:22:43,296 p=16134 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-13 13:22:44,078 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:22:44,104 p=16134 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-13 13:22:44,448 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:22:44,474 p=16134 u=jenkins |  TASK [Create_container : iptables] *********************************************
+2019-04-13 13:22:44,817 p=16134 u=jenkins |  changed: [localhost]
+2019-04-13 13:22:44,820 p=16134 u=jenkins |  PLAY RECAP *********************************************************************
+2019-04-13 13:22:44,820 p=16134 u=jenkins |  localhost                  : ok=13   changed=10   unreachable=0    failed=0   

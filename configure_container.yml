@@ -1,0 +1,5 @@
+---
+- name: Configure container LXC
+  hosts: localhost
+  roles:
+    - Create_container

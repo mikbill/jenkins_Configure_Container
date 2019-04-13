@@ -1,0 +1,14 @@
+[Unit]
+Description=jboss
+[Service]
+Type=simple
+PIDFile=/var/run/jboss.pid
+WorkingDirectory=/usr/local/share/jboss/bin
+User=root
+Group=root
+OOMScoreAdjust=-1000
+ExecStart=/usr/local/share/jboss/bin/standalone.sh -b 0.0.0.0 -c standalone-full-ha.xml
+TimeoutSec=300
+Restart=always
+[Install]
+WantedBy=multi-user.target
